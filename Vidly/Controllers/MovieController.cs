@@ -30,7 +30,7 @@ namespace Vidly.Controllers
             var randomviewModel = new RandomMovieViewControl()
             {
                 Movie = movie,
-                Customer = customers
+                Customers = customers
             };
 
             return View(randomviewModel);
