@@ -175,6 +175,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MovieController.cs" />
@@ -196,6 +197,10 @@
     <Compile Include="Migrations\202004291603276_populateMembershipType.cs" />
     <Compile Include="Migrations\202004291603276_populateMembershipType.designer.cs">
       <DependentUpon>202004291603276_populateMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004291615538_applydataannotationTocustomer.cs" />
+    <Compile Include="Migrations\202004291615538_applydataannotationTocustomer.designer.cs">
+      <DependentUpon>202004291615538_applydataannotationTocustomer.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -267,6 +272,8 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\_navbar.cshtml" />
     <Content Include="Views\Movie\Random.cshtml" />
+    <Content Include="Views\Customer\Index.cshtml" />
+    <Content Include="Views\Customer\Detail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -298,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004291603276_populateMembershipType.resx">
       <DependentUpon>202004291603276_populateMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004291615538_applydataannotationTocustomer.resx">
+      <DependentUpon>202004291615538_applydataannotationTocustomer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
