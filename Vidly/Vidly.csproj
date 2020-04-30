@@ -202,9 +202,26 @@
     <Compile Include="Migrations\202004291615538_applydataannotationTocustomer.designer.cs">
       <DependentUpon>202004291615538_applydataannotationTocustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202004291806581_NamecoltoMembershipType.cs" />
+    <Compile Include="Migrations\202004291806581_NamecoltoMembershipType.designer.cs">
+      <DependentUpon>202004291806581_NamecoltoMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004291824379_addBrithDateColtoCustomer.cs" />
+    <Compile Include="Migrations\202004291824379_addBrithDateColtoCustomer.designer.cs">
+      <DependentUpon>202004291824379_addBrithDateColtoCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004301525173_colNumberinstockandOthertoMovie.cs" />
+    <Compile Include="Migrations\202004301525173_colNumberinstockandOthertoMovie.designer.cs">
+      <DependentUpon>202004301525173_colNumberinstockandOthertoMovie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202004301529209_addGenretoMovie.cs" />
+    <Compile Include="Migrations\202004301529209_addGenretoMovie.designer.cs">
+      <DependentUpon>202004301529209_addGenretoMovie.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
@@ -274,6 +291,8 @@
     <Content Include="Views\Movie\Random.cshtml" />
     <Content Include="Views\Customer\Index.cshtml" />
     <Content Include="Views\Customer\Detail.cshtml" />
+    <Content Include="Views\Movie\Index.cshtml" />
+    <Content Include="Views\Movie\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -308,6 +327,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004291615538_applydataannotationTocustomer.resx">
       <DependentUpon>202004291615538_applydataannotationTocustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004291806581_NamecoltoMembershipType.resx">
+      <DependentUpon>202004291806581_NamecoltoMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004291824379_addBrithDateColtoCustomer.resx">
+      <DependentUpon>202004291824379_addBrithDateColtoCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004301525173_colNumberinstockandOthertoMovie.resx">
+      <DependentUpon>202004301525173_colNumberinstockandOthertoMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202004301529209_addGenretoMovie.resx">
+      <DependentUpon>202004301529209_addGenretoMovie.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
