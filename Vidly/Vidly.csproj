@@ -218,6 +218,18 @@
     <Compile Include="Migrations\202004301529209_addGenretoMovie.designer.cs">
       <DependentUpon>202004301529209_addGenretoMovie.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202005011049599_genrevalidation.cs" />
+    <Compile Include="Migrations\202005011049599_genrevalidation.designer.cs">
+      <DependentUpon>202005011049599_genrevalidation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005020603460_coldateofbirthrequireToCustomer.cs" />
+    <Compile Include="Migrations\202005020603460_coldateofbirthrequireToCustomer.designer.cs">
+      <DependentUpon>202005020603460_coldateofbirthrequireToCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202005020610340_revertbackcoldateofbirthrequireToCustomer.cs" />
+    <Compile Include="Migrations\202005020610340_revertbackcoldateofbirthrequireToCustomer.designer.cs">
+      <DependentUpon>202005020610340_revertbackcoldateofbirthrequireToCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -225,10 +237,12 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
+    <Compile Include="Models\MIn18YearsIfAMember.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\CustomerViewModel.cs" />
+    <Compile Include="ViewModels\MovieViewModel.cs" />
     <Compile Include="ViewModels\RandomMovieViewControl.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -295,6 +309,7 @@
     <Content Include="Views\Movie\Index.cshtml" />
     <Content Include="Views\Movie\Details.cshtml" />
     <Content Include="Views\Customer\CustomerForm.cshtml" />
+    <Content Include="Views\Movie\MovieForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -341,6 +356,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004301529209_addGenretoMovie.resx">
       <DependentUpon>202004301529209_addGenretoMovie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005011049599_genrevalidation.resx">
+      <DependentUpon>202005011049599_genrevalidation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005020603460_coldateofbirthrequireToCustomer.resx">
+      <DependentUpon>202005020603460_coldateofbirthrequireToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005020610340_revertbackcoldateofbirthrequireToCustomer.resx">
+      <DependentUpon>202005020610340_revertbackcoldateofbirthrequireToCustomer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
