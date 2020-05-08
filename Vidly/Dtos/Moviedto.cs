@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
-using System.ComponentModel.DataAnnotations;
 
-namespace Vidly.Models
+namespace Vidly.Dtos
 {
-    public class Movie
+    public class MovieDto
     {
         public int Id { get; set; }
 
@@ -15,22 +15,16 @@ namespace Vidly.Models
         public string Name { get; set; }
 
         [Required]
-        [Display(Name="Number in Stock")]
         [Range(1, 20, ErrorMessage = "Stock Must be between 1 to 20")]
         public int NumberinStock { get; set; }
 
         [Required]
-        [Display(Name ="Created Date")]
         public DateTime DateAdded { get; set; }
 
-        [Required]
-        [Display(Name = "Release Date")]
+        [Required]        
         public DateTime? ReleaseDate { get; set; }
 
-        [Required]
-        [Display(Name = "Genre")]
+        [Required]       
         public int GenreId { get; set; }
-
-        public Genre Genre { get; set; }
     }
 }
