@@ -31,6 +31,7 @@ namespace Vidly.Controllers.Api
             return Ok(Mapper.Map<Movie, MovieDto>(Movie));
         }
         [HttpPost]
+        [Authorize(Roles = RoleName.CanManageMovie)]
         public IHttpActionResult CreateMovie(MovieDto movieDto)
         {
             if (!ModelState.IsValid)
@@ -47,6 +48,7 @@ namespace Vidly.Controllers.Api
         }
 
         [HttpPut]
+        [Authorize(Roles = RoleName.CanManageMovie)]
         public IHttpActionResult UpdateMovie(int Id, MovieDto movieDto)
         {
             if(!ModelState.IsValid)
@@ -71,6 +73,7 @@ namespace Vidly.Controllers.Api
         }
         
         [HttpDelete]
+        [Authorize(Roles = RoleName.CanManageMovie)]
         public IHttpActionResult RemoveMovie(int Id)
         {
 

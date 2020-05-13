@@ -10,11 +10,13 @@
 
 @Html.ActionLink("New Movie","New","Movie",null,new {@class="btn btn-primary" })
 
-<table class="table table-bordered table-hover">
+
+<table id="movies" class="table table-bordered table-hover">
     <thead>
         <tr>
             <th> Name </th>
             <th> Genres </th>
+            <th>Delete</th>
         </tr>
     </thead>
     @foreach (var movie in Model)
@@ -22,6 +24,33 @@
         <tr>
             <td>@Html.ActionLink(movie.Name,"Edit","Movie",new { id = movie.Id },null)</td>
             <td>@movie.Genre.name</td>
+            <td><button data-movie-id="@movie.Id" class="btn-link js-delete">Delete</button></td>
         </tr>
     }
 </table>
+@section scripts
+{
+    <script>
+        $(document).ready(function () {
+            $('#movies').DataTable()
+
+            $('#movies').on("click", ".js-delete", function () {
+                var movie = $(this)
+                bootbox.confirm("are you sure you want to remove this movie ?", function (result) {
+                    if (result) {
+                        $.ajax({
+                            url: "api/movies/" + movie.attr('data-movie-id'),
+                            method: "DELETE",
+                            success: function () {
+                                movie.parents("tr").remove();
+                            }
+
+                        });                         
+                    }
+                     
+                });
+            });
+        });
+    </script>
+
+}
